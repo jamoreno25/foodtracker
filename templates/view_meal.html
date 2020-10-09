@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	</head>
+	<body>
+		<h1>View Meal Details</h1>
+		<h1> {{ meal_form.food.name }} </h1>
+		<table class="table table-bordered table-striped">
+			<tbody>
+				{% if meal_form %}
+				<tr>
+					<th>Calories</th>
+					<td>{{ meal_form.food.calories }}</td>
+				</tr>
+				<tr>
+					<th>Serving Size</th>
+					<td>{{ meal_form.food.serving_size }}</td>
+				</tr>
+				<tr>
+					<th>Total Fat</th>
+					<td>{{ meal_form.food.total_fat }}</td>
+				</tr>
+				<tr>
+					<th>Saturated Fat</th>
+					<td>{{ meal_form.food.saturated_fat }}</td>
+				</tr>
+				<tr>
+					<th>Cholesterol</th>
+					<td>{{ meal_form.food.cholesterol }}</td>
+				</tr>
+				<tr>
+					<th>Sodium</th>
+					<td>{{ meal_form.food.sodium }}</td>
+				</tr>
+				<tr>
+					<th>Carbohydrate</th>
+					<td>{{ meal_form.food.total_carbohydrate }}</td>
+				</tr>
+				<tr>
+					<th>Dietary Fibre</th>
+					<td>{{ meal_form.food.dietary_fibre }}</td>
+				</tr>
+				<tr>
+					<th>Sugar</th>
+					<td>{{ meal_form.food.sugar }}</td>
+				</tr>
+				<tr>
+					<th>Protein</th>
+					<td>{{ meal_form.food.protein }}</td>
+					<td>	
+					</td>
+				</tr>
+				{% else %}
+				<tr>
+					<td colspan="6">No meals yet</td>
+				</tr>
+				{% endif %}
+			</tbody>
+		</table>
+	</body>
+</html>
